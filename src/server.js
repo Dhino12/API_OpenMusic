@@ -5,6 +5,8 @@ import AlbumService from './services/AlbumService.js';
 import MusicService from './services/MusicService.js';
 import AlbumValidator from './validator/albums/index.js';
 import MusicValidator from './validator/music/index.js';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const init = async () => {
     const albumService = new AlbumService();
@@ -37,8 +39,9 @@ const init = async () => {
         }
     ])
 
-    await server.register(require('inert'))
+
     console.log(`Server berjalan pada ${server.info.uri}`);
+    await server.start();
 }
 
 init();

@@ -1,11 +1,11 @@
-const { nanoid } = require("nanoid");
-const { Pool } = require("pg");
-const { default: InvariantsError } = require("../exceptions/InvariantsError");
-const { default: NotfoundError } = require("../exceptions/NotFoundError");
+import Pool from "pg";
+import { nanoid } from "nanoid";
+import InvariantsError from "../exceptions/InvariantsError.js";
+import NotFoundError from "../exceptions/NotFoundError.js";
 
 class AlbumService {
     constructor () {
-        this._pool = new Pool();
+        this._pool = new Pool.Pool();
     }
 
     async addAlbum(name, year) {

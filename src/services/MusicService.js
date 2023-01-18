@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 import pg from 'pg';
-import InvariantsError from '../exceptions/InvariantsError';
-import NotfoundError from '../exceptions/NotFoundError';
+import InvariantsError from '../exceptions/InvariantsError.js';
+import NotfoundError from '../exceptions/NotFoundError.js';
 
 const { Pool } = pg;
 

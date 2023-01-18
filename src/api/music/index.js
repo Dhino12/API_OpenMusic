@@ -1,5 +1,5 @@
-import MusicHandler from "./handler"
-import routes from "./routes";
+import MusicHandler from "./handler.js"
+import routes from "./routes.js";
 
 const musicPlugin = {
     name: 'music',

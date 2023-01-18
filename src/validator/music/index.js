@@ -1,5 +1,5 @@
-import InvariantsError from "../../exceptions/InvariantsError";
-import musicPayloadSchema from "./schema"
+import InvariantsError from "../../exceptions/InvariantsError.js";
+import musicPayloadSchema from "./schema.js"
 
 const MusicValidator = {
     validateMusicPayload: (payload) => {
